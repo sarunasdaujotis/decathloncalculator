@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'lt.swedbank'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Decathlon score calculator',
+                   'Implementation-Version': version,
+                   'Main-Class': 'lt.swedbank.decathlon.Main'
+    }
+}
+
+sourceSets {
+    main {
+        output.resourcesDir = "build/libs"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
