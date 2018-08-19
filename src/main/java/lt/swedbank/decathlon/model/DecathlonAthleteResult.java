@@ -2,9 +2,6 @@ package lt.swedbank.decathlon.model;
 
 import java.math.BigDecimal;
 
-/**
- * @author Sarunas Daujotis
- */
 public class DecathlonAthleteResult {
     private BigDecimal result;
     private BigDecimal score;
