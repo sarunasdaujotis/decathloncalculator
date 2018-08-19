@@ -15,7 +15,7 @@ public class DecathlonAthletesParser {
 
     public static DecathlonAthlete parse(List<String> list) {
         if (list.size() != ATHLETE_RESULT_SIZE) {
-            throw new RuntimeException("Input line must have " + ATHLETE_RESULT_SIZE + "elements");
+            throw new RuntimeException("Input line must have " + ATHLETE_RESULT_SIZE + " elements");
         }
         DecathlonAthlete decathlonAthlete = new DecathlonAthlete();
         decathlonAthlete.setFullName(list.get(ATHLETE_NAME_POSITION));
