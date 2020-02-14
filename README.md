@@ -1,5 +1,6 @@
 # Decathlon athletes standing calculator
 [![Build Status](https://api.travis-ci.com/sarunasdaujotis/decathloncalculator.svg?branch=master)](https://travis-ci.com/sarunasdaujotis/decathloncalculator)
+
 Simple application to calculate decathlon competition athlete standings and create output xml
 
 ## Requirements
