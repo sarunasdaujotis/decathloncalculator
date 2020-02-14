@@ -1,4 +1,4 @@
-package lt.swedbank.decathlon.parsers;
+package com.sarunasdaujotis.decathlon.parsers;
 
 import java.io.IOException;
 import java.nio.file.Files;

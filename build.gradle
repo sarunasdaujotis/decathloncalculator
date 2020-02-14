@@ -2,10 +2,11 @@ plugins {
     id 'java'
 }
 
-group 'lt.swedbank'
+group 'com.sarunasdaujotis'
 version '1.0'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -15,16 +16,24 @@ jar {
     manifest {
         attributes 'Implementation-Title': 'Decathlon score calculator',
                    'Implementation-Version': version,
-                   'Main-Class': 'lt.swedbank.decathlon.Main'
+                   'Main-Class': 'com.sarunasdaujotis.decathlon.Main'
     }
 }
 
-sourceSets {
-    main {
-        output.resourcesDir = "build/libs"
+//sourceSets {
+//    main {
+//        output.resourcesDir = "build/libs"
+//    }
+//}
+
+tasks {
+    clean {
+        delete "build"
     }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
 }

@@ -1,6 +1,6 @@
-package lt.swedbank.decathlon.helpers;
+package com.sarunasdaujotis.decathlon.helpers;
 
-import lt.swedbank.decathlon.model.Competition;
+import com.sarunasdaujotis.decathlon.model.Competition;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
