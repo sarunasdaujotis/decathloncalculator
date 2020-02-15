@@ -1,17 +1,13 @@
 package com.sarunasdaujotis.decathlon.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-@XmlRootElement
 public final class Competition {
 
 	private final Map<String, List<DecathlonAthlete>> decathlonAthletesByScore;
@@ -58,7 +54,6 @@ public final class Competition {
 		return new Competition(decathlonAthletesByScore);
 	}
 
-	@XmlElement(name = "athlete")
 	public Map<String, List<DecathlonAthlete>> getDecathlonAthletes() {
 		return decathlonAthletesByScore;
 	}
@@ -78,6 +73,13 @@ public final class Competition {
 	@Override
 	public int hashCode() {
 		return Objects.hash(decathlonAthletesByScore);
+	}
+
+	@Override
+	public String toString() {
+		return "Competition{" +
+				"decathlonAthletesByScore=" + decathlonAthletesByScore +
+				'}';
 	}
 }
 

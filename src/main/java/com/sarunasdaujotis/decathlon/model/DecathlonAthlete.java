@@ -1,7 +1,5 @@
 package com.sarunasdaujotis.decathlon.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +7,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-@XmlType(propOrder={"fullName", "score", "place", "result"})
 public final class DecathlonAthlete implements Comparator<DecathlonAthlete> {
     private final String fullName;
     private final BigDecimal score;
@@ -29,7 +26,6 @@ public final class DecathlonAthlete implements Comparator<DecathlonAthlete> {
         return score;
     }
 
-    @XmlElement(name = "eventResult")
     public List<DecathlonAthleteResult> getResult() {
         return Collections.unmodifiableList(result);
     }
@@ -64,5 +60,14 @@ public final class DecathlonAthlete implements Comparator<DecathlonAthlete> {
     @Override
     public int compare(final DecathlonAthlete o1, final DecathlonAthlete o2) {
         return o1.getScore().compareTo(o2.getScore());
+    }
+
+    @Override
+    public String toString() {
+        return "DecathlonAthlete{" +
+                "fullName='" + fullName + '\'' +
+                ", score=" + score +
+                ", result=" + result +
+                '}';
     }
 }

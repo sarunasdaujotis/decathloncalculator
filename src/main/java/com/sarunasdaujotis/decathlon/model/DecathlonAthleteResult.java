@@ -49,4 +49,13 @@ public final class DecathlonAthleteResult {
     public int hashCode() {
         return Objects.hash(result, score, event);
     }
+
+    @Override
+    public String toString() {
+        return "DecathlonAthleteResult{" +
+                "result=" + result +
+                ", score=" + score +
+                ", event=" + event +
+                '}';
+    }
 }
