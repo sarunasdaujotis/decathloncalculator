@@ -31,11 +31,11 @@ public final class Competition {
 			if (entry.getValue().size() > 1) {
 				int sharedPlace = place + 1;
 				for (DecathlonAthlete decathlonAthlete : entry.getValue()) {
-					final String key = place + "-" + sharedPlace;
+					final String sharedPlaceKey = place + "-" + sharedPlace;
 					final List<DecathlonAthlete> decathlonAthleteList =
-							decathlonAthletesByScore.getOrDefault(key, new ArrayList<>());
+							decathlonAthletesByScore.getOrDefault(sharedPlaceKey, new ArrayList<>());
 					decathlonAthleteList.add(decathlonAthlete);
-                    decathlonAthletesByScore.putIfAbsent(key, decathlonAthleteList);
+                    decathlonAthletesByScore.putIfAbsent(sharedPlaceKey, decathlonAthleteList);
 				}
 				place = sharedPlace + 1;
 			} else {
