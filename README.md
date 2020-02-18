@@ -13,4 +13,4 @@ Simple application to calculate decathlon competition athlete standings and crea
   
 ## Running
   * cd build/libs
-  * java -jar decathloncalculator-1.0.jar sample.csv output.xml
+  * java -jar decathloncalculator-1.0.jar sample.csv output.dump
